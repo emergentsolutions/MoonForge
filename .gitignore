@@ -1,58 +1,126 @@
-# build output
+# === Build Output ===
 dist/
 .output/
-
-# generated types
+build/
+out/
 .astro/
+.turbo/
+.next/
+.nuxt/
+.svelte-kit/
+.contentlayer/
 
-# dependencies
+# === Dependencies ===
 node_modules/
 
-# logs
+# === Package Manager ===
+# pnpm
+.pnpm-store/
+.pnpm-debug.log*
+
+# npm
 npm-debug.log*
+
+# yarn
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 
-# environment variables
+# === Environment Variables ===
 .env
-.env.production
-.env.local
-.env.development
+.env.*
+!.env.example
+!.env.template
 
-# macOS-specific files
+# === OS Files ===
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
 
-# editor directories and files
-.idea/
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# === Editor Directories ===
+# VSCode
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
-# Cloudflare
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# === Cloudflare ===
 .wrangler/
 .dev.vars
 
-# AI Assistant State
+# === AI Assistant State ===
 @MEMORY/state/
 *.state.json
 *.state.backup
 
-# cache
+# === Cache ===
 .cache/
+.eslintcache
+.stylelintcache
 
-# testing
+# === Testing ===
 coverage/
+.nyc_output/
 
+# === Deployment Platforms ===
 # Netlify
 .netlify/
 
 # Vercel
 .vercel/
 
-# Temporary files
-*.tmp
-*.bak
+# Cloudflare Pages
+.cloudflare/
 
-# Local Netlify folder
-.netlify
+# === Temporary Files ===
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Debugging ===
+.debug/
+
+# === Generated Content ===
+public/sitemap*.xml
+public/robots.txt
+public/feed.xml
+
+# === Monorepo Specific ===
+.nx/
+.nx-cache/
